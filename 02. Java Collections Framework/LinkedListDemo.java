@@ -11,12 +11,18 @@ public class LinkedListDemo
    public static void main(String[] args)
    {  
       LinkedList<String> staff = new LinkedList<String>();
-      staff.addLast("Diana");
-      staff.addLast("Harry");
+      //From stack overflow: as LinkedList implements both the Deque and the Queue interface,
+      //it has both the add and addLast methods which do exactly the same thing.
+      //add(E) is from the Queue interface and addLast(E) is from the Deque interface
+      staff.add("Diana");
+      staff.add("Harry");
       staff.addLast("Romeo");
       staff.addLast("Tom"); //DHRT
 
-      staff.addFirst("Sam");//SDHRT
+      //staff.addFirst("Sam");//SDHRT
+      staff.add(0, "Sam");
+
+
  
       String name1 = staff.getFirst();//S
       String name2 = staff.getLast();//T

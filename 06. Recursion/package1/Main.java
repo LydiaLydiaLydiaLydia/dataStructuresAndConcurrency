@@ -1,4 +1,4 @@
-package package1;
+/*package package1;
 
 public class Main {
 
@@ -11,3 +11,6 @@ public class Main {
         System.out.println("Finishing main "+n);
     }
 }
+
+
+ */
