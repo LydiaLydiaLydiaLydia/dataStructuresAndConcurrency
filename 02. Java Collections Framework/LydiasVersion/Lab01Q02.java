@@ -41,13 +41,18 @@ public class Lab01Q02 {
 
 
         //Part 1
+        System.out.println("Output for the HashSet implementation: ");
         Iterator<String> it = my_hash_set.iterator();
         while(it.hasNext()){
             System.out.println(it.next());
         }
 
         //Part 2
-
+        System.out.println("Output for the TreeSet implementation: ");
+        it = my_tree_set.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
 
     }
 }
