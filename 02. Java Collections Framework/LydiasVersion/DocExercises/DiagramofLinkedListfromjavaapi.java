@@ -1,4 +1,4 @@
-package LydiasVersion;
+package LydiasVersion.DocExercises;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,9 +11,16 @@ public class DiagramofLinkedListfromjavaapi {
         names.add("Harry");
         names.add("Romeo");
 
-        names.addFirst("Sam");
+        //names.addFirst("Sam");
 
-        names.add("Sam");
+        //names.add("Sam");
+
+        ListIterator<String> iterator = names.listIterator(); // |DHR
+        iterator.next(); // D|HR
+        iterator.next(); // DH|R
+        iterator.add("Juliet");// DHJ|R
+        iterator.previous();
+        iterator.remove();
 
         System.out.println(names);
     }
