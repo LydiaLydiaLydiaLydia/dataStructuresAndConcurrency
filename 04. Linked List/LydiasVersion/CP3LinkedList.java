@@ -1,3 +1,5 @@
+package LydiasVersion;
+
 import java.util.NoSuchElementException;
 //singly linked list with first reference only 
 
@@ -57,4 +59,29 @@ public class CP3LinkedList<E> {
 			current = current.next;
 		}
 	}
+
+	//1. Write a method size with the following header that calculates the size of the list. The header is:
+	public int size(){
+		int size = 0;
+		Node current = first;
+		while (current != null){
+			size ++;
+			current = current.next;
+		}
+		return size;
+	}
+
+	//2. Write a contains() method that checks if the list contains a particular value. What is the header for the
+	// method?
+	public boolean contains(E element){
+		Node current = first;
+		while (current != null){
+			if (current.data.equals(element)){
+				return true;
+			}
+			current = current.next;
+		}
+		return false;
+	}
+
 }
