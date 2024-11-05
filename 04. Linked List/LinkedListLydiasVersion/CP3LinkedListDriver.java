@@ -1,4 +1,4 @@
-package LydiasVersion;
+package LinkedListLydiasVersion;
 
 public class CP3LinkedListDriver {
     public static void main(String[] args) {

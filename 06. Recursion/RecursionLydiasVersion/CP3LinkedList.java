@@ -1,4 +1,4 @@
-package LydiasVersion;
+package RecursionLydiasVersion;
 
 import java.util.NoSuchElementException;
 //singly linked list with first reference only 
@@ -77,6 +77,16 @@ public class CP3LinkedList<E> {
 			current = current.next;
 		}
 		return size;
+	}
+	private int sizeSub(Node head){
+		if(head == null){
+			return 0;
+		}else{
+			return 1 + sizeSub(head.next);
+		}
+	}
+	public int sizeRecursive(){
+		return sizeSub(first);
 	}
 
 	//2. Write a contains() method that checks if the list contains a particular value. What is the header for the

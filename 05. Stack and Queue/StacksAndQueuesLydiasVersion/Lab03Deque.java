@@ -1,4 +1,4 @@
-package LydiasVersion;
+package StacksAndQueuesLydiasVersion;
 
 import java.util.Deque;
 import java.util.LinkedList;

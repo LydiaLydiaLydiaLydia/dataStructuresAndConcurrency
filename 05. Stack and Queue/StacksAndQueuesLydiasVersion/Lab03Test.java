@@ -1,9 +1,9 @@
-package LydiasVersion;
+package StacksAndQueuesLydiasVersion;
 
 import org.junit.jupiter.api.Test;
 
-import static LydiasVersion.Lab03.isBalanced;
-import static LydiasVersion.Lab03Deque.isDequeBalanced;
+import static StacksAndQueuesLydiasVersion.Lab03.isBalanced;
+import static StacksAndQueuesLydiasVersion.Lab03Deque.isDequeBalanced;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Lab03Test {
