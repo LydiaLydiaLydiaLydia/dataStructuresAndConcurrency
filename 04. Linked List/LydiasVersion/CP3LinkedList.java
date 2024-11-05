@@ -38,6 +38,8 @@ public class CP3LinkedList<E> {
 		newLink.data = element;
 		if (first == null){
 			last = newLink;
+		}else{
+			first.prev = newLink;
 		}
 		newLink.next = first;
 		first = newLink;
@@ -101,6 +103,8 @@ public class CP3LinkedList<E> {
 		newLink.data = element;
 		if(last == null){
 			first = newLink;
+		}else{
+			last.next = newLink;
 		}
 		newLink.prev = last;
 		last = newLink;

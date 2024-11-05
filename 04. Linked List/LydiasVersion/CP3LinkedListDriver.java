@@ -6,6 +6,7 @@ public class CP3LinkedListDriver {
         names.addFirst("Lydia");
         names.addFirst("Emma");
         names.addFirst("Lara");
+        names.addLast("Lydia");
         names.print();
     }
 }
