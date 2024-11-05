@@ -14,8 +14,10 @@ public class CP3LinkedList<E> {
      private class Node {
 		public E data;
 		public Node next;
+		public Node prev;
 	}
 	private Node first;
+	 private Node last;
 		
 	/** 
     	Constructs an empty linked list.
@@ -23,6 +25,7 @@ public class CP3LinkedList<E> {
 	public CP3LinkedList()
 	{  
 		first = null;
+		last = null;
 	}
  
 	/**
@@ -33,6 +36,9 @@ public class CP3LinkedList<E> {
 	{  
 		Node newLink = new Node();
 		newLink.data = element;
+		if (first == null){
+			last = newLink;
+		}
 		newLink.next = first;
 		first = newLink;
 	}
@@ -82,6 +88,22 @@ public class CP3LinkedList<E> {
 			current = current.next;
 		}
 		return false;
+	}
+
+	//4. Adding the addLast method
+	//I have had to add a CP3LinkedList class attribute of 'private Node last', and a
+	// conditional to check if the Node is the first node added to an empty list in the
+	// addFirst method, in order to assign a Node to 'last'
+	//5. Turning it into a doubly linked list, I added the Node class attribute 'public Node
+	// prev' and in addLast method, the line 'newLink.prev = last'
+	public void addLast(E element){
+		Node newLink = new Node();
+		newLink.data = element;
+		if(last == null){
+			first = newLink;
+		}
+		newLink.prev = last;
+		last = newLink;
 	}
 
 }
