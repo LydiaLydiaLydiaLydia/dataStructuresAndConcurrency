@@ -5,7 +5,7 @@ public class BinarySearch {
     //do i return an index or do i return a boolean
     //if it's not there return -1 if it's there return the index?
     public static int binarySearch(int[] arr, int key) {
-
+        return binarySearchRecursive(arr, key, 0, arr.length - 1);
     }
     private static int binarySearchRecursive(int[] arr, int key, int low, int high) {
         if (low > high) {
@@ -19,5 +19,6 @@ public class BinarySearch {
         } else if (arr[mid] > key) {
             return binarySearchRecursive(arr, key, low, mid - 1);
         }
+        return -1;
     }
 }
