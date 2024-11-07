@@ -60,7 +60,6 @@ public class CP3LinkedList<E> {
 	}
 
 	public void print(){
-           //outputs the data on the list
 		Node current = first;
 		while (current != null){
 			System.out.println(current.data);
@@ -68,7 +67,32 @@ public class CP3LinkedList<E> {
 		}
 	}
 
-	//1. Write a method size with the following header that calculates the size of the list. The header is:
+	//Lab 4 Question 5
+	public void printRecursive(){
+		printSub(first);
+	}
+	private void printSub(Node head){
+		if(head == null){
+			return;
+		}else{
+			System.out.println(head.data);
+			printSub(head.next);
+		}
+	}
+
+	//Lab 04 Question 5
+	public void printRecursiveBackwards(){
+		printSubBackwards(last);
+	}
+	private void printSubBackwards(Node tail){
+		if(tail == null){
+			return;
+		}else{
+			System.out.println(tail.data);
+			printSubBackwards(tail.prev);
+		}
+	}
+
 	public int size(){
 		int size = 0;
 		Node current = first;
@@ -78,6 +102,8 @@ public class CP3LinkedList<E> {
 		}
 		return size;
 	}
+
+	//Lab 4 Question 2
 	private int sizeSub(Node head){
 		if(head == null){
 			return 0;
@@ -89,8 +115,6 @@ public class CP3LinkedList<E> {
 		return sizeSub(first);
 	}
 
-	//2. Write a contains() method that checks if the list contains a particular value. What is the header for the
-	// method?
 	public boolean contains(E element){
 		Node current = first;
 		while (current != null){
@@ -102,12 +126,6 @@ public class CP3LinkedList<E> {
 		return false;
 	}
 
-	//4. Adding the addLast method
-	//I have had to add a CP3LinkedList class attribute of 'private Node last', and a
-	// conditional to check if the Node is the first node added to an empty list in the
-	// addFirst method, in order to assign a Node to 'last'
-	//5. Turning it into a doubly linked list, I added the Node class attribute 'public Node
-	// prev' and in addLast method, the line 'newLink.prev = last'
 	public void addLast(E element){
 		Node newLink = new Node();
 		newLink.data = element;

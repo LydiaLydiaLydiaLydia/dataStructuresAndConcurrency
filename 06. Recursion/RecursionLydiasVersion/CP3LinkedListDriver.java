@@ -8,6 +8,9 @@ public class CP3LinkedListDriver {
         names.addFirst("Laura");
         names.addFirst("Silva");
         int size = names.sizeRecursive();
-        names.print();
+        //names.print();
+
+        names.printRecursive();
+        //names.printRecursiveBackwards();
     }
 }
