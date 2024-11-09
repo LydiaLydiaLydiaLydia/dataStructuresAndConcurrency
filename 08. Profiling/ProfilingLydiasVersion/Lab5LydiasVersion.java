@@ -9,7 +9,7 @@ public class Lab5LydiasVersion {
         
         List<String> arrList = new ArrayList();
         List<String> linkList = new LinkedList();
-        int listSize = 100000; // 10 is first value, then 100, etc
+        int listSize = 10; // 10 is first value, then 100, etc
 
         int reps = 100000;  // you may need to experiment with value for reps
 
@@ -48,7 +48,6 @@ public class Lab5LydiasVersion {
 
         startTime = System.currentTimeMillis();
         testGetForLinkedList(linkList, randomNos);
-        testGetForArrayList(arrList, randomNos);
         endTime = System.currentTimeMillis();
         duration = endTime-startTime;
         System.out.println(duration);
