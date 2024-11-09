@@ -6,7 +6,8 @@ public class Q4Fibonacci {
         if(n == 0) return 0;
         if(n == 1) return 1;
         else{
-            return FibonacciRecursive(n - 1) + FibonacciRecursive(n - 2);
+            int result = FibonacciRecursive(n - 1) + FibonacciRecursive(n - 2);
+            return result;
         }
     }
     public static int FibonacciNonRecursive(int n) {
