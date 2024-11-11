@@ -21,14 +21,14 @@ public class CASpellCheck {
            throws FileNotFoundException {
       // Read the dictionary and the document
 
-      List<String> dictionaryWords = readDictionary("C:\\Users\\t00222338\\Desktop\\words");
+      Collection<String> dictionaryWords = readDictionary("C:\\Users\\t00222338\\Desktop\\words.txt");
       //Set<String> documentWords = readWords("alice30.txt");
       Set<String> documentWords = readWords("C:\\Users\\t00222338\\Desktop\\Ulysses.TXT"); // file to be spell-checked
 
       // Print all words that are in the document but not the dictionary
       int numberMisspeltWords = 0;
       for (String word : documentWords) {
-         if (Collections.binarySearch(dictionaryWords, word) < 0) {
+         if (!dictionaryWords.contains(word)) {
             numberMisspeltWords++;
             //System.out.println(word);
          }
@@ -36,16 +36,15 @@ public class CASpellCheck {
       System.out.println("Number of misspelt words: " + numberMisspeltWords);
    }
 
-   private static List<String> readDictionary(String filename)
+   private static Collection<String> readDictionary(String filename)
            throws FileNotFoundException {
-      List<String> words = new ArrayList<>();
+      Collection<String> words = new LinkedHashSet<>();
       Scanner in = new Scanner(new File(filename));
       // Use any characters other than a-z or A-Z as delimiters
       in.useDelimiter("[^a-zA-Z]+");
       while (in.hasNext()) {
          words.add(in.next().toLowerCase());
       }
-      Collections.sort(words);
       return words;
    }
 
